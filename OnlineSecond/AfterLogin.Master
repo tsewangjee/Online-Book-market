@@ -1,0 +1,98 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="AfterLogin.master.vb" Inherits="OnlineSecond.AfterLogin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+<style type="text/css">
+        .auto-style1 {
+            width: 120px;
+            height: 40px;
+        }
+
+        .auto-style4 {
+            text-align: center;
+        }
+
+        .auto-style5 {
+            text-align: center;
+            width: 318px;
+            font-size: x-large;
+            height: 48px;
+        }
+        .auto-style6 {
+            width: 60px;
+            height: 48px;
+        }
+        .auto-style7 {
+            width: 900px;
+            text-align: right;
+            height: 48px;
+        }
+        
+        .auto-style8 {
+            margin-left: 0px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="width: 1100px; margin: 0 auto;">
+            <tr style="width: 1100px;">
+                <td class="auto-style6">
+                    <img src="image/leafbook.jpg" class="auto-style1" />
+                </td>
+                <td style="font-family: 'Courier New'; font-display: block;" class="auto-style5"><strong>~ Book-Shelf ~</strong></td>
+                <td class="auto-style7">
+                    <asp:Label ID="Label1" runat="server" Text="Welcome "></asp:Label>
+                    &nbsp;&nbsp;<asp:Button ID="Button2" runat="server" Text="Sign Out" Height="30px" Width="80px" BackColor="Black"   Font-Bold="True" Font-Size="Small" Font-Underline="False" ForeColor="White" Font-Italic="False" BorderStyle="None" CssClass="auto-style8" CausesValidation="False" />
+                </td>
+            </tr>
+            <tr style="width: 1100px; height: 40px; background-color: #E3EAEB">
+                <td colspan="3" class="auto-style4" aria-dropeffect="none" aria-grabbed="false">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Font-Italic="True" ForeColor="#666666" BackColor="#E3EAEB" DynamicHorizontalOffset="2" Font-Names="MV Boli" Font-Size="0.8em" StaticSubMenuIndent="10px">
+                        <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#E3EAEB" />
+                        <DynamicSelectedStyle BackColor="#1C5E55" BorderColor="#BCDBE4" />
+                        <Items >
+                            <asp:MenuItem Text="My Books" Value="My Books" NavigateUrl="~/MyBooks.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Sell more ?" Value="Sell more ?" NavigateUrl="~/BookDetails.aspx"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#666666" BorderStyle="None" ForeColor="White" />
+                        <StaticMenuItemStyle Font-Bold="True" Font-Italic="False" Font-Size="Larger" ForeColor="#009933" HorizontalPadding="30px" VerticalPadding="10px" />
+                        <StaticSelectedStyle ForeColor="#3B9976" BackColor="#1C5E55" />
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr style="width: 1100px">
+                <td colspan="3"></td>
+            </tr>
+            <tr style="width: 1100px; height: 10px;">
+                <td colspan="3" style="background-color: #3399FF"></td>
+            </tr>
+            <tr style="width: 1100px; height: 550px">
+                <td colspan="3" >
+                    <asp:ContentPlaceHolder ID="bodymain" runat="server">
+                        <p>
+                            <br />
+                        </p>
+                        <p>
+                        </p>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr style="width: 1100px; height: 20px;">
+                <td colspan="3" style="background-color: #3399FF; color: #ffffff" class="auto-style4">~ All rights reserved ~
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
